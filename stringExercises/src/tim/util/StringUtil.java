@@ -1,5 +1,6 @@
 package tim.util;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class StringUtil {
@@ -170,4 +171,69 @@ public class StringUtil {
 			}
 		}
 	}
+	
+	public static boolean NoRepeatedChars(String s) {
+		HashSet<Character> hs = new HashSet<Character>();
+		
+		for(int i=0;s !=null && i<s.length();i++) {
+			Character c = new Character(s.charAt(i));
+			
+			if(hs.contains(c)) {
+				return false;
+			}
+			
+			hs.add(c);
+		}
+		
+		return true;
+	}
+	
+	public static boolean isPerm(String s, String candidate) {
+		
+		// sanity check for null, empty string
+		if(s == null || candidate == null || s.length() == 0 || candidate.length() == 0) {
+			return false;
+		}
+		
+		// candidate can't be longer than s
+		
+		if(s.length() < candidate.length()) {
+			return false;
+		}
+		
+		boolean ret = true;
+		HashMap<Character,Integer>  s_map = getFrequency(s);
+		HashMap<Character,Integer>  c_map = getFrequency(candidate);
+		
+		for(Character c: c_map.keySet()) {
+			if(!s_map.containsKey(c)) {
+				ret = false; 
+				break;
+			} else {
+				if(c_map.get(c) > s_map.get(c)) {
+					ret=false;
+					break;
+				}
+			}
+		}
+		
+		return ret;
+	}
+
+	private static HashMap<Character,Integer> getFrequency(String s) {
+		HashMap<Character,Integer> ret = new HashMap<Character, Integer> ();
+		
+		for (int i=0; i<s.length();i++) {
+			Character c = new Character(s.charAt(i));
+			
+			if(!ret.containsKey(c)) {
+				ret.put(c,new Integer(1));
+			} else {
+				ret.put(c, ret.get(c) + 1);
+			}
+		}
+		
+		return ret;
+	}
+
 }
