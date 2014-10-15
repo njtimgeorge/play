@@ -235,5 +235,99 @@ public class StringUtil {
 		
 		return ret;
 	}
+	
+	public static boolean isRotation(String s1, String s2) {
+		
+		if(s1 == null || s2 == null) return false;
+		
+		if(s1.length() != s2.length()) return false; // a rotation is the same length
+		
+		if(s1.equals(s2)) return true; // rotated by 0
+		
+		char first = s1.charAt(0);
+		
+		for(int i=1;i < s2.length(); i++) {
+			if(s2.charAt(i) == first) {
+				
+				// does s2[i] map to s1[0]?
+				
+				boolean found = true;
+				
+				for(int j=1; j<s1.length() && i+j < s2.length();j++) {
+					if(s1.charAt(j) != s2.charAt(i+j) ) {
+						// s2[i] does not map to s1[0]
+						found = false;
+						break; 
+					}
+				}
+				
+				if(found == true) {
+					 return isSubstring(s1.substring(i+1), s2.substring(0,s2.length() - i - 1 )); 
+				}
+			}
+		}
+		
+		return false;
+	}
+
+	public static boolean isRotation1(String s1, String s2) {
+		
+		if(s1 == null || s2 == null) return false;
+		
+		if(s1.length() != s2.length()) return false; // a rotation is the same length
+		
+		if(s1.equals(s2)) return true; // rotated by 0
+		
+		char first = s1.charAt(0);
+		int where = 0;
+		boolean found = false;
+		int length = s1.length();
+		
+		// s1[0] maps s2[i]
+		// s2[0] matches s1[i] for length - i chars
+		
+		for(int i=1;i < length; i++) {
+			if(s2.charAt(i) == first) {
+				
+				// does s2[i] map to s1[0]?
+				
+				found = true;
+				
+				for(int j=1; j<length && i+j < length;j++) {
+					if(s1.charAt(j) != s2.charAt(i+j) ) {
+						// s2[i] does not map to s1[0]
+						found = false;
+						break; 
+					}
+				}
+				
+				if(found == true) {
+					where = i;
+					break;
+				}
+			}
+		}
+		
+		if(found != true) return false;
+		
+		System.out.println("found");
+		
+		for(int i=0;i<length - where - 1;i++) {
+			System.out.printf("compare %c %c\n",s1.charAt(where+i+1),s2.charAt(i));
+			
+			if(s1.charAt(where+i+1) != s2.charAt(i) ) {
+				return false;
+			}
+			
+		}
+		
+		return true;
+	}
+	
+	private static boolean isSubstring(String s1, String s2) {
+		if(s1.contains(s2)) return true;
+		
+		return false;
+	}
 
 }
