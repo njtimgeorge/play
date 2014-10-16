@@ -1,5 +1,6 @@
 package util;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 // singly linked list for Cracking the Coding Interview exercises
@@ -241,6 +242,26 @@ public class LinkedList<T extends Comparable<T>> {
 		} else {
 			head = gt_head;
 		}
+	}
+	
+	public boolean isPalindrome() {
+		
+		ArrayList<T> arry = new ArrayList<T>();
+		
+		for(Node n=head;n!=null;n=n.next) {
+			arry.add(n.getElement());
+		}
+		
+		int i=0;
+		int j=arry.size()-1;
+		
+		while(i<j) {
+			if(arry.get(i) != arry.get(j)) return false;
+			i++;
+			j--;
+		}
+		
+		return true;
 	}
 
 	public void corrupt(Node p, Node q) {
