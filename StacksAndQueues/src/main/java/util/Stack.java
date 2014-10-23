@@ -12,6 +12,7 @@ public class Stack<T> {
 	// head and tail of stack
 	private int head;
 	
+	@SuppressWarnings("unchecked")
 	public Stack() {
 		data = (T[])new Object[STACK_MAX];
 		min=0;

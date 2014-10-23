@@ -1,5 +1,4 @@
 package iview.iview1;
-import iview.iview1.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -12,7 +11,6 @@ public class TestSparseNumbers {
 		
 		for(int i=0; i<99;i++) {
 		//for(int i=2; i<3;i++) {
-			Integer ii = new Integer(i);
 			Integer correct = new Integer(s.solution(i));
 			Integer try1 = new Integer(s.attempt1(i));
 			

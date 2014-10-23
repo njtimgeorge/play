@@ -1,7 +1,6 @@
 package test;
 
 import static org.junit.Assert.*;
-import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -15,7 +14,7 @@ public class TestPalindrome {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.insertArray(arry);
 		
-		Assert.assertTrue(l.isPalindrome());
+		assertTrue(l.isPalindrome());
 	}
 
 	@Test
@@ -24,6 +23,6 @@ public class TestPalindrome {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.insertArray(arry);
 		
-		Assert.assertFalse(l.isPalindrome());
+		assertFalse(l.isPalindrome());
 	}
 }

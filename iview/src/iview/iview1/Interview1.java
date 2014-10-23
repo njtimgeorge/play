@@ -97,7 +97,8 @@ class Solution {
         return ret;
     }
     
-    private void toBits(int N, String line) {
+    @SuppressWarnings("unused")
+	private void toBits(int N, String line) {
     	String s="";
     	
     	for(int i=31;i>=0;i--) {
@@ -112,7 +113,7 @@ class Solution {
     
     public static void main(String args[]) {
     	
-    	System.out.println(new Integer(new Solution().solution(2)).toString()); // 38 expect 40
+    	System.out.println(new Integer(new Solution().solution(38)).toString()); // 38 expect 40
     	System.out.println(new Integer(new Solution().attempt1(2)).toString()); // 38 expect 40
     	
     }

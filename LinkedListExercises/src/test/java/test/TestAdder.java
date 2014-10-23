@@ -1,7 +1,6 @@
 package test;
 
 import static org.junit.Assert.*;
-import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -23,9 +22,9 @@ public class TestAdder {
 		
 		LinkedList<Integer> res = Adder.add(l1, l2);
 		
-		Assert.assertEquals(2, res.getHead().getElement().intValue());
-		Assert.assertEquals(1, res.getHead().getNext().getElement().intValue());
-		Assert.assertEquals(9, res.getHead().getNext().getNext().getElement().intValue());
+		assertEquals(2, res.getHead().getElement().intValue());
+		assertEquals(1, res.getHead().getNext().getElement().intValue());
+		assertEquals(9, res.getHead().getNext().getNext().getElement().intValue());
 	}
 
 	@Test
@@ -41,11 +40,11 @@ public class TestAdder {
 		
 		LinkedList<Integer> res = Adder.add(l1, l2);
 		
-		Assert.assertEquals(5, res.getHead().getElement().intValue());
-		Assert.assertEquals(9, res.getHead().getNext().getElement().intValue());
-		Assert.assertEquals(8, res.getHead().getNext().getNext().getElement().intValue());
-		Assert.assertEquals(1, res.getHead().getNext().getNext().getNext().getElement().intValue());
-		Assert.assertEquals(5, res.getHead().getNext().getNext().getNext().getNext().getElement().intValue());
+		assertEquals(5, res.getHead().getElement().intValue());
+		assertEquals(9, res.getHead().getNext().getElement().intValue());
+		assertEquals(8, res.getHead().getNext().getNext().getElement().intValue());
+		assertEquals(1, res.getHead().getNext().getNext().getNext().getElement().intValue());
+		assertEquals(5, res.getHead().getNext().getNext().getNext().getNext().getElement().intValue());
 	}
 
 	@Test
@@ -61,9 +60,9 @@ public class TestAdder {
 		
 		LinkedList<Integer> res = Adder.addReverse(l1, l2);
 		
-		Assert.assertEquals(9, res.getHead().getElement().intValue());
-		Assert.assertEquals(1, res.getHead().getNext().getElement().intValue());
-		Assert.assertEquals(2, res.getHead().getNext().getNext().getElement().intValue());
+		assertEquals(9, res.getHead().getElement().intValue());
+		assertEquals(1, res.getHead().getNext().getElement().intValue());
+		assertEquals(2, res.getHead().getNext().getNext().getElement().intValue());
 	}
 
 	@Test
@@ -79,11 +78,11 @@ public class TestAdder {
 		
 		LinkedList<Integer> res = Adder.addReverse(l1, l2);
 		
-		Assert.assertEquals(5, res.getHead().getElement().intValue());
-		Assert.assertEquals(1, res.getHead().getNext().getElement().intValue());
-		Assert.assertEquals(8, res.getHead().getNext().getNext().getElement().intValue());
-		Assert.assertEquals(9, res.getHead().getNext().getNext().getNext().getElement().intValue());
-		Assert.assertEquals(5, res.getHead().getNext().getNext().getNext().getNext().getElement().intValue());
+		assertEquals(5, res.getHead().getElement().intValue());
+		assertEquals(1, res.getHead().getNext().getElement().intValue());
+		assertEquals(8, res.getHead().getNext().getNext().getElement().intValue());
+		assertEquals(9, res.getHead().getNext().getNext().getNext().getElement().intValue());
+		assertEquals(5, res.getHead().getNext().getNext().getNext().getNext().getElement().intValue());
 	}
 
 }

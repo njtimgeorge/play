@@ -77,9 +77,9 @@ public class StringUtil {
 			col=c;
 		}
 		
-		boolean equals(element other) {
-			return other.row == row && other.col == col;
-		}
+		//boolean equals(element other) {
+			//return other.row == row && other.col == col;
+		//}
 	}
 	
 	public static void rotate90InPlace(int[][] arr) throws Exception {

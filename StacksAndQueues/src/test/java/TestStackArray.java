@@ -1,5 +1,4 @@
 import static org.junit.Assert.*;
-import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -11,14 +10,14 @@ public class TestStackArray {
 	@Test
 	public void testDefaultEmptyPop() {
 		Stack<Integer> s = new Stack<Integer>();
-		Assert.assertTrue(s.pop() == null);
+		assertTrue(s.pop() == null);
 	}
 
 	@Test
 	public void testDefaultPushPop() {
 		Stack<Integer> s = new Stack<Integer>();
 		s.push(1);
-		Assert.assertEquals(s.pop().intValue(),1);
+		assertEquals(s.pop().intValue(),1);
 	}
 
 	@Test (expected = StackOverflowError.class)
@@ -39,7 +38,7 @@ public class TestStackArray {
 		}
 		
 		for(int i=9;i>= 0;i--) {
-			Assert.assertEquals(s.pop().intValue(), i);
+			assertEquals(s.pop().intValue(), i);
 		}
 		
 	}
@@ -52,9 +51,9 @@ public class TestStackArray {
 		Stack<Integer> s2 = new Stack<Integer>(d,256,256);
 		Stack<Integer> s3 = new Stack<Integer>(d,512,256);
 		
-		Assert.assertEquals(s1.pop(),null);
-		Assert.assertEquals(s2.pop(),null);
-		Assert.assertEquals(s3.pop(),null);
+		assertEquals(s1.pop(),null);
+		assertEquals(s2.pop(),null);
+		assertEquals(s3.pop(),null);
 	}
 
 	@Test
@@ -69,9 +68,9 @@ public class TestStackArray {
 		s2.push(3);
 		s3.push(5);
 		
-		Assert.assertEquals(s1.pop().intValue(),1);
-		Assert.assertEquals(s2.pop().intValue(),3);
-		Assert.assertEquals(s3.pop().intValue(),5);
+		assertEquals(s1.pop().intValue(),1);
+		assertEquals(s2.pop().intValue(),3);
+		assertEquals(s3.pop().intValue(),5);
 	}
 
 	@Test
@@ -95,10 +94,10 @@ public class TestStackArray {
 		}
 
 		
-		Assert.assertEquals(s1.pop().intValue(),1);
-		Assert.assertEquals(s2.pop().intValue(),3);
+		assertEquals(s1.pop().intValue(),1);
+		assertEquals(s2.pop().intValue(),3);
 
-		Assert.assertTrue(stackOverflow);
+		assertTrue(stackOverflow);
 	}
 
 	@Test
@@ -116,9 +115,9 @@ public class TestStackArray {
 		}
 		
 		for(int i=9;i>= 0;i--) {
-			Assert.assertEquals(s1.pop().intValue(), i);
-			Assert.assertEquals(s2.pop().intValue(), i+10);
-			Assert.assertEquals(s3.pop().intValue(), i+20);
+			assertEquals(s1.pop().intValue(), i);
+			assertEquals(s2.pop().intValue(), i+10);
+			assertEquals(s3.pop().intValue(), i+20);
 		}
 
 	}

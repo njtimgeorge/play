@@ -115,6 +115,7 @@ public class LinkedList<T extends Comparable<T>> {
 		if(head.element.getClass() != other.head.element.getClass()) return false;
 
 		Node listNode = head;
+		@SuppressWarnings("unchecked")
 		Node otherListNode = (Node) other.head;
 		
 		while(listNode != null && otherListNode != null) {

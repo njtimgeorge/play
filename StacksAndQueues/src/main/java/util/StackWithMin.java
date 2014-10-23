@@ -20,6 +20,7 @@ public class StackWithMin<T extends Comparable<T>> {
 	}
 	
 	public T peek() {
+		if(head == null) return null;
 		return head.element;
 	}
 	
@@ -54,7 +55,7 @@ public class StackWithMin<T extends Comparable<T>> {
 	}
 	
 	public T min() {
-		if(min == null) return null;
+		if(head == null) return null;
 
 		return min.element;
 	}

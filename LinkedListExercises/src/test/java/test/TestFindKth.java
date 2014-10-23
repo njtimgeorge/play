@@ -2,7 +2,6 @@ package test;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import util.LinkedList;
@@ -13,7 +12,7 @@ public class TestFindKth {
 	public void testEmpty() {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		
-		Assert.assertTrue(l.findKthElement(0)==null);
+		assertTrue(l.findKthElement(0)==null);
 	}
 	
 	@Test
@@ -22,7 +21,7 @@ public class TestFindKth {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.insertArray(arry);
 
-		Assert.assertTrue(l.findKthElement(0) == 1);		
+		assertTrue(l.findKthElement(0) == 1);		
 	}
 
 	@Test
@@ -31,7 +30,7 @@ public class TestFindKth {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.insertArray(arry);
 		
-		Assert.assertTrue(l.findKthElement(9) == 0);		
+		assertTrue(l.findKthElement(9) == 0);		
 	}
 
 	@Test
@@ -40,7 +39,7 @@ public class TestFindKth {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.insertArray(arry);
 		
-		Assert.assertTrue(l.findKthElement(5) == 4);		
+		assertTrue(l.findKthElement(5) == 4);		
 	}
 
 }

@@ -1,9 +1,7 @@
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import java.util.Collections;
 import java.util.Hashtable;
-import java.lang.System;
 
 import tim.util.BasicHashTable;
 import tim.util.BasicHashTableGeneric;
@@ -11,7 +9,7 @@ import tim.util.BasicHashTableGeneric;
 public class TestHash {
 
 	@Test
-	public void TestHash() {
+	public void TestHashTable() {
 		Hashtable<String,Character> tbl = new Hashtable<String,Character>();
 		
 		char[] chrs = new char[2];

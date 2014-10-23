@@ -2,7 +2,6 @@ package test;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import util.LinkedList;
@@ -15,7 +14,7 @@ public class TestRemoveDuplicatesNoBuffer {
 		
 		l.removeDuplicatesNoBuffer();
 		
-		Assert.assertTrue(l.getHead() == null);
+		assertTrue(l.getHead() == null);
 	}
 
 	@Test
@@ -26,7 +25,7 @@ public class TestRemoveDuplicatesNoBuffer {
 		
 		l.removeDuplicatesNoBuffer();
 		
-		Assert.assertTrue(l.getHead().getNext() == null);
+		assertTrue(l.getHead().getNext() == null);
 	}
 
 	@Test
@@ -40,7 +39,7 @@ public class TestRemoveDuplicatesNoBuffer {
 		LinkedList<Integer>.Node n = l.getHead();
 		
 		for(int i=0;i<arry.length;i++) {
-			Assert.assertEquals(arry[i], n.getElement());
+			assertEquals(arry[i], n.getElement());
 			n=n.getNext();
 		}		
 	}
@@ -57,7 +56,7 @@ public class TestRemoveDuplicatesNoBuffer {
 		LinkedList<Integer>.Node n = l.getHead();
 		
 		for(int i=0;i<arry1.length;i++) {
-			Assert.assertEquals(arry1[i], n.getElement());
+			assertEquals(arry1[i], n.getElement());
 			n=n.getNext();
 		}		
 	}
@@ -74,7 +73,7 @@ public class TestRemoveDuplicatesNoBuffer {
 		LinkedList<Integer>.Node n = l.getHead();
 		
 		for(int i=0;i<arry1.length;i++) {
-			Assert.assertEquals(arry1[i], n.getElement());
+			assertEquals(arry1[i], n.getElement());
 			n=n.getNext();
 		}		
 	}

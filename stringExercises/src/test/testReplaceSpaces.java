@@ -16,7 +16,6 @@ public class testReplaceSpaces {
 	
 	@Test
 	public void testNULL() {
-		String source = null;
 		char[] c =  new char[1];
 
 		StringUtil.replaceSpaces(c, 0);	// test for exceptions	

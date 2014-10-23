@@ -2,7 +2,6 @@ package test;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import util.LinkedList;
@@ -15,7 +14,7 @@ public class TestDetectCycle {
 		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.insertArray(arry);
 		
-		Assert.assertEquals(null,l.detectCycle());		
+		assertEquals(null,l.detectCycle());		
 	}
 
 	@Test
@@ -26,6 +25,6 @@ public class TestDetectCycle {
 		
 		l.corrupt(l.getHead().getNext().getNext(), l.getHead().getNext().getNext().getNext().getNext());
 		
-		Assert.assertEquals(l.getHead().getNext().getNext(),l.detectCycle());		
+		assertEquals(l.getHead().getNext().getNext(),l.detectCycle());		
 	}
 }

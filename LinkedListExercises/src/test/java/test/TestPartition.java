@@ -1,7 +1,6 @@
 package test;
 
 import static org.junit.Assert.*;
-import junit.framework.Assert;
 
 import org.junit.Test;
 
@@ -17,7 +16,7 @@ public class TestPartition {
 		
 		l.partition(l1.getHead().getElement());
 		
-		Assert.assertTrue(l.getHead() == null);	
+		assertTrue(l.getHead() == null);	
 	}
 
 	@Test
@@ -27,7 +26,7 @@ public class TestPartition {
 		
 		l.partition(null);
 		
-		Assert.assertTrue(l.getHead().getElement().intValue() == 1);	
+		assertTrue(l.getHead().getElement().intValue() == 1);	
 	}
 
 	@Test
@@ -42,7 +41,7 @@ public class TestPartition {
 		LinkedList<Integer>.Node n = l.getHead();
 		
 		for(int i=0;i<arry1.length;i++) {
-			Assert.assertEquals(arry1[i], n.getElement());
+			assertEquals(arry1[i], n.getElement());
 			n=n.getNext();
 		}		
 	}
@@ -63,7 +62,7 @@ public class TestPartition {
 		//System.out.println("Received " + l.toString());
 		
 		for(int i=0;i<arry1.length;i++) {
-			Assert.assertEquals(arry1[i], n.getElement());
+			assertEquals(arry1[i], n.getElement());
 			n=n.getNext();
 		}		
 	}
@@ -80,7 +79,7 @@ public class TestPartition {
 		LinkedList<Integer>.Node n = l.getHead();
 		
 		for(int i=0;i<arry1.length;i++) {
-			Assert.assertEquals(arry1[i], n.getElement());
+			assertEquals(arry1[i], n.getElement());
 			n=n.getNext();
 		}		
 	}
@@ -97,7 +96,7 @@ public class TestPartition {
 		LinkedList<Integer>.Node n = l.getHead();
 		
 		for(int i=0;i<arry1.length;i++) {
-			Assert.assertEquals(arry1[i], n.getElement());
+			assertEquals(arry1[i], n.getElement());
 			n=n.getNext();
 		}		
 	}

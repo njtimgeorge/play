@@ -2,11 +2,9 @@ package test;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import util.LinkedList;
-import util.LinkedList.Node;
 
 public class TestDelete {
 	
@@ -30,7 +28,7 @@ public class TestDelete {
 				
 		l.delete(l.getHead());
 		
-		Assert.assertNull(l.getHead());
+		assertNull(l.getHead());
 	}
 
 	@Test
@@ -41,7 +39,7 @@ public class TestDelete {
 
 		l.delete(l.getHead());
 
-		Assert.assertEquals(l.getHead().getElement().intValue(),3);		
+		assertEquals(l.getHead().getElement().intValue(),3);		
 	}
 	
 	@Test
@@ -57,7 +55,7 @@ public class TestDelete {
 
 		for(LinkedList<Integer>.Node n=l.getHead();n!=null;n=n.getNext()) prev=n;
 
-		Assert.assertEquals(prev.getElement().intValue(),15);		
+		assertEquals(prev.getElement().intValue(),15);		
 	}
 
 	@Test
@@ -76,13 +74,13 @@ public class TestDelete {
 
 		for(n=l.getHead();n!=null;n=n.getNext()) {
 			if(n.getElement().intValue() == 11) {
-				Assert.assertEquals(n.getNext().getElement().intValue(), 7);
+				assertEquals(n.getNext().getElement().intValue(), 7);
 				return;
 			}
 		}
 
 		
-		Assert.fail("Should return in for loop");		
+		fail("Should return in for loop");		
 	}
 
 }

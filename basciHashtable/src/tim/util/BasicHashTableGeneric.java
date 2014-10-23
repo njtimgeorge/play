@@ -9,6 +9,7 @@ public class BasicHashTableGeneric<KeyType,ValueType> {
 		m_hashTable = new HashTableNode[CHashTableSize];
 	}
 	
+	@SuppressWarnings("unchecked")
 	public ValueType get(KeyType k) {
 		int slot = k.hashCode() % CHashTableSize;		
 		ValueType ret=null;
